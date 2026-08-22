@@ -1,0 +1,5 @@
+{
+  "AAPL": {"marketCap": 3200000000000,"totalAssets": 3600000000000,"interestBearingDebt": 100000000000,"interestBearingAssets": 50000000000,"totalRevenue": 400000000000,"impureRevenue": 100000000,"businessTags":["technology"]},
+  "MSFT": {"marketCap": 3500000000000,"totalAssets": 600000000000,"interestBearingDebt": 80000000000,"interestBearingAssets": 50000000000,"totalRevenue": 280000000000,"impureRevenue": 50000000,"businessTags":["software"]},
+  "NVDA": {"marketCap": 4500000000000,"totalAssets": 111000000000,"interestBearingDebt": 8400000000,"interestBearingAssets": 12000000000,"totalRevenue": 190000000000,"impureRevenue": 20000000,"businessTags":["semiconductor"]}
+}
