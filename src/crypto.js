@@ -1,0 +1,4 @@
+const crypto=require('crypto');const config=require('./config');
+function enc(text){if(!config.encryptionKey) throw new Error('ENCRYPTION_KEY is required');const iv=crypto.randomBytes(12),key=Buffer.from(config.encryptionKey,'hex'),c=crypto.createCipheriv('aes-256-gcm',key,iv);const out=Buffer.concat([c.update(String(text),'utf8'),c.final()]);return `v1.${iv.toString('base64url')}.${c.getAuthTag().toString('base64url')}.${out.toString('base64url')}`}
+function dec(blob){const [v,ivB,tagB,dataB]=String(blob).split('.');if(v!=='v1') throw new Error('Unsupported encrypted secret version');const key=Buffer.from(config.encryptionKey,'hex'),d=crypto.createDecipheriv('aes-256-gcm',key,Buffer.from(ivB,'base64url'));d.setAuthTag(Buffer.from(tagB,'base64url'));return Buffer.concat([d.update(Buffer.from(dataB,'base64url')),d.final()]).toString('utf8')}
+module.exports={enc,dec};
