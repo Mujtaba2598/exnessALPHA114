@@ -1,0 +1,7 @@
+{
+  "name":"alpha-ai-trading-suite","version":"1.0.0","private":true,
+  "description":"ALPHA dynamic Bento trading dashboard with audit-friendly AI signal ensemble, backtesting, approvals and TickerAll connectivity.",
+  "main":"src/server.js","engines":{"node":">=20"},
+  "scripts":{"start":"node src/server.js","dev":"node --watch src/server.js","migrate":"node src/scripts/migrate.js","create-owner":"node src/scripts/create-owner.js","screen":"node src/scripts/screen-universe.js","test":"node --test"},
+  "dependencies":{"better-sqlite3":"^11.8.1","compression":"^1.7.5","cookie-parser":"^1.4.7","dotenv":"^16.6.1","express":"^5.1.0","express-rate-limit":"^7.5.0","helmet":"^8.1.0","jsonwebtoken":"^9.0.2","pino":"^9.7.0","pino-http":"^10.5.0"}
+}
