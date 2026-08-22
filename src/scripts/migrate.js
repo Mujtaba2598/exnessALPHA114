@@ -1,0 +1,1 @@
+const {migrate,db}=require('../db');migrate();console.log('ALPHA database ready');db.close();

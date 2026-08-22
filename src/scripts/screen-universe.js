@@ -1,0 +1,1 @@
+const config=require('../config');const {screenMany}=require('../shariah/screening');const symbols=process.argv[2]?process.argv[2].split(','):config.trading.watchlist;console.table(screenMany(symbols.map(s=>s.trim().toUpperCase())));
